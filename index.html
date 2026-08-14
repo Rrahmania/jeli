@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jeli - Website edukasi literasi keuangan digital dan keamanan siber untuk siswa SD kelas 4-6.">
+  <title>Jeli — Jeli Sebelum Klik, Cermat Sebelum Beli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#beranda" aria-label="Jeli Beranda">
+        <span class="brand-mark">👀</span>
+        <span>
+          <strong>Jeli</strong>
+          <small>Jeli sebelum klik, cermat sebelum beli</small>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="#belajar">Belajar</a>
+        <a href="#simulasi">Simulasi</a>
+        <a href="#misi">Misi</a>
+        <a href="#pendamping">Pendamping</a>
+      </nav>
+      <div class="progress-pill">
+        <span>⭐</span>
+        <b id="xpValue">0 XP</b>
+      </div>
+    </header>
+
+    <main>
+      <section id="beranda" class="hero section">
+        <div class="hero-copy">
+          <div class="eyebrow">🌟 Misi Anak Jeli</div>
+          <h1>Belajar uang digital.<br><span>Berani hadapi link palsu.</span></h1>
+          <p>Jeli membantu kamu belajar mengenal uang digital, menjaga data pribadi, dan berpikir sebelum menekan sebuah link.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#belajar">Mulai Belajar <span>→</span></a>
+            <button class="btn secondary" onclick="startSimulation()">Coba Simulasi</button>
+          </div>
+          <div class="trust-row">
+            <span>🛡️ Aman untuk anak</span>
+            <span>🎮 Belajar sambil bermain</span>
+            <span>👨‍👩‍👧 Didampingi orang dewasa</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="sun"></div>
+          <div class="cloud cloud-1"></div>
+          <div class="cloud cloud-2"></div>
+          <div class="character">
+            <div class="cape">★</div>
+            <div class="head">
+              <div class="eye e1"></div><div class="eye e2"></div>
+              <div class="mouth"></div>
+              <div class="hair"></div>
+            </div>
+            <div class="body"></div>
+            <div class="magnifier">🔎</div>
+          </div>
+          <div class="coin coin-1">Rp</div>
+          <div class="coin coin-2">★</div>
+          <div class="shield">🛡️</div>
+        </div>
+      </section>
+
+      <section class="quick section">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Hari ini kamu mau...</span>
+            <h2>Pilih petualanganmu!</h2>
+          </div>
+          <span class="mini-note">Belajar sedikit demi sedikit ✨</span>
+        </div>
+        <div class="quick-grid">
+          <button class="quick-card" onclick="scrollToId('belajar')">
+            <span class="icon pink">📚</span><span><b>Belajar</b><small>Kenalan dengan uang digital</small></span><span>→</span>
+          </button>
+          <button class="quick-card" onclick="startSimulation()">
+            <span class="icon blue">🔎</span><span><b>Cek Link</b><small>Temukan pesan mencurigakan</small></span><span>→</span>
+          </button>
+          <button class="quick-card" onclick="scrollToId('misi')">
+            <span class="icon yellow">🏆</span><span><b>Kerjakan Misi</b><small>Kumpulkan XP dan lencana</small></span><span>→</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="belajar" class="section">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">📚 Ruang Belajar</span>
+            <h2>Belajar jadi Jeli</h2>
+          </div>
+          <p>Materi singkat, bahasa sederhana, dan contoh yang dekat dengan kehidupan sehari-hari.</p>
+        </div>
+        <div class="module-grid">
+          <article class="module-card pink-card">
+            <div class="module-top"><span class="module-icon">💰</span><span class="tag">Modul 01</span></div>
+            <h3>Kenalan dengan Uang Digital</h3>
+            <p>Kenali saldo, top-up, kebutuhan, keinginan, dan cara menggunakan uang dengan bijak.</p>
+            <button class="text-btn" onclick="openLesson('money')">Mulai modul →</button>
+          </article>
+          <article class="module-card blue-card">
+            <div class="module-top"><span class="module-icon">🔐</span><span class="tag">Modul 02</span></div>
+            <h3>Rahasia Data Pribadi</h3>
+            <p>Belajar mengapa password, PIN, dan OTP harus dijaga seperti rahasia penting.</p>
+            <button class="text-btn" onclick="openLesson('privacy')">Mulai modul →</button>
+          </article>
+          <article class="module-card yellow-card">
+            <div class="module-top"><span class="module-icon">🚨</span><span class="tag">Modul 03</span></div>
+            <h3>Awas Link Palsu!</h3>
+            <p>Kenali tanda-tanda pesan aneh, hadiah palsu, dan tautan yang mencoba menipu.</p>
+            <button class="text-btn" onclick="startSimulation()">Coba simulasi →</button>
+          </article>
+          <article class="module-card green-card">
+            <div class="module-top"><span class="module-icon">🛒</span><span class="tag">Modul 04</span></div>
+            <h3>Cermat Sebelum Beli</h3>
+            <p>Latih diri membedakan kebutuhan dan keinginan sebelum meminta orang tua membeli sesuatu.</p>
+            <button class="text-btn" onclick="openLesson('shopping')">Mulai modul →</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="simulasi" class="section simulation-section">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">🔎 Zona Simulasi</span>
+            <h2>Tanya dulu sebelum klik!</h2>
+          </div>
+          <p>Ini hanya simulasi pembelajaran. Jangan memasukkan data asli, password, PIN, atau OTP.</p>
+        </div>
+        <div class="simulator">
+          <div class="sim-progress"><span id="simProgressBar"></span></div>
+          <div class="sim-label">PESAN MASUK • SIMULASI</div>
+          <div class="message">
+            <div class="avatar">🎁</div>
+            <div>
+              <b>Hadiah Game</b><small>baru saja</small>
+              <p>🎉 Selamat! Kamu mendapat <strong>500 diamond GRATIS!</strong> Buruan klaim sebelum 10 menit habis.</p>
+              <div class="fake-link">https://hadiah-gratis.example/claim</div>
+            </div>
+          </div>
+          <div id="simChoices" class="choices">
+            <button onclick="answerSim('click')">Klik sekarang! 🎁</button>
+            <button onclick="answerSim('ignore')">Abaikan pesan</button>
+            <button onclick="answerSim('adult')">Tunjukkan ke orang tua/guru</button>
+          </div>
+          <div id="simFeedback" class="feedback hidden"></div>
+          <button id="nextSim" class="btn primary hidden" onclick="nextSimulation()">Kasus berikutnya →</button>
+        </div>
+      </section>
+
+      <section id="misi" class="section">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">🏆 Papan Misi</span>
+            <h2>Jadilah Anak Jeli!</h2>
+          </div>
+          <p>Selesaikan misi untuk mendapatkan XP.</p>
+        </div>
+        <div class="mission-list">
+          <div class="mission">
+            <div class="mission-icon">🧠</div>
+            <div><b>Kenali kebutuhan dan keinginan</b><small>Pelajari Modul 01</small></div>
+            <span class="mission-status" id="mission1">0/1</span>
+            <button onclick="completeMission(1)">Kerjakan</button>
+          </div>
+          <div class="mission">
+            <div class="mission-icon">🔒</div>
+            <div><b>Jaga rahasia digital</b><small>Pelajari Modul 02</small></div>
+            <span class="mission-status" id="mission2">0/1</span>
+            <button onclick="completeMission(2)">Kerjakan</button>
+          </div>
+          <div class="mission">
+            <div class="mission-icon">🕵️</div>
+            <div><b>Tangkap link mencurigakan</b><small>Berhasil dalam simulasi</small></div>
+            <span class="mission-status" id="mission3">0/1</span>
+            <button onclick="startSimulation()">Kerjakan</button>
+          </div>
+        </div>
+        <div class="badge-panel">
+          <div class="badge-big">🏅</div>
+          <div><span class="kicker">Lencana berikutnya</span><h3>Detektif Link</h3><p>Berhasil menjawab simulasi keamanan digital.</p></div>
+          <div class="badge-progress"><b id="badgeText">0%</b><div><span id="badgeBar"></span></div></div>
+        </div>
+      </section>
+
+      <section id="pendamping" class="section">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">🤝 Ruang Pendamping</span>
+            <h2>Belajar tidak sendirian</h2>
+          </div>
+          <p>Jeli melibatkan orang dewasa agar kebiasaan aman terbentuk bersama.</p>
+        </div>
+        <div class="support-grid">
+          <article class="support-card">
+            <span>👩‍🏫</span><h3>Untuk Guru</h3>
+            <p>Gunakan modul, simulasi, dan evaluasi sederhana sebagai aktivitas kelas.</p>
+            <button class="outline-btn" onclick="showInfo('guru')">Lihat panduan</button>
+          </article>
+          <article class="support-card">
+            <span>👨‍👩‍👧</span><h3>Untuk Orang Tua</h3>
+            <p>Bantu anak membiasakan diri bertanya sebelum klik dan sebelum melakukan pembelian.</p>
+            <button class="outline-btn" onclick="showInfo('orangtua')">Lihat panduan</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><span>👀</span><b>Jeli</b></div>
+      <p>Media edukasi literasi keuangan digital & keamanan siber untuk anak.</p>
+      <span class="footer-note">Prototype • Tidak memproses transaksi keuangan</span>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="close" onclick="closeModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">🎉 Hebat!</div>
+  <script src="script.js"></script>
+</body>
+</html>
