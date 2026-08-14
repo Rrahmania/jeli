@@ -1,0 +1,1025 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fbfcff;
+  color: #1f2940;
+  font-family: "Nunito", sans-serif;
+}
+
+.app-shell {
+  overflow: hidden;
+}
+
+/* =========================
+   TOPBAR & NAVIGATION
+========================= */
+
+.topbar {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #edf0f6;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: #1f2940;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #fff1f4;
+  font-size: 25px;
+}
+
+.brand strong {
+  font: 800 28px "Baloo 2";
+  display: block;
+  line-height: 22px;
+}
+
+.brand small {
+  font-size: 9px;
+  font-weight: 800;
+  color: #7f8798;
+  letter-spacing: 0.3px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  font-weight: 800;
+  color: #697287;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: #ff6d86;
+}
+
+.progress-pill {
+  background: #fff7d8;
+  border: 1px solid #ffe8a4;
+  padding: 9px 14px;
+  border-radius: 99px;
+  font-size: 13px;
+}
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+  max-width: 1120px;
+  margin: auto;
+  padding: 75px 28px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 610px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.eyebrow,
+.kicker {
+  color: #ff6d86;
+  font-weight: 900;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font: 800 clamp(45px, 6vw, 72px) / 0.95 "Baloo 2";
+  margin: 18px 0;
+}
+
+.hero h1 span {
+  color: #6d7cff;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #6f788b;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.btn {
+  border: 0;
+  border-radius: 15px;
+  padding: 14px 22px;
+  font: 800 15px "Nunito";
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary {
+  background: #ff6d86;
+  color: #fff;
+  box-shadow: 0 10px 25px #ff6d8630;
+}
+
+.secondary {
+  background: #eef0ff;
+  color: #5966d9;
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: #7d8699;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================
+   HERO ART
+========================= */
+
+.hero-art {
+  height: 480px;
+  position: relative;
+  background: linear-gradient(160deg, #eef1ff, #fff4ef);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.sun {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: #ffe28b;
+  right: 40px;
+  top: 45px;
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50px;
+  width: 120px;
+  height: 28px;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 55px;
+  height: 55px;
+  left: 20px;
+  top: -27px;
+}
+
+.cloud::after {
+  width: 40px;
+  height: 40px;
+  left: 65px;
+  top: -18px;
+}
+
+.cloud-1 {
+  top: 90px;
+  left: 35px;
+}
+
+.cloud-2 {
+  top: 170px;
+  right: 20px;
+  transform: scale(0.7);
+}
+
+/* =========================
+   CHARACTER
+========================= */
+
+.character {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  height: 250px;
+}
+
+.head {
+  position: absolute;
+  z-index: 2;
+  left: 32px;
+  top: 5px;
+  width: 145px;
+  height: 145px;
+  border-radius: 48% 48% 45% 45%;
+  background: #ffd0a7;
+  border: 7px solid #252e45;
+}
+
+.eye {
+  position: absolute;
+  top: 64px;
+  width: 13px;
+  height: 18px;
+  border-radius: 50%;
+  background: #252e45;
+}
+
+.e1 {
+  left: 42px;
+}
+
+.e2 {
+  right: 42px;
+}
+
+.mouth {
+  position: absolute;
+  left: 63px;
+  top: 93px;
+  width: 22px;
+  height: 12px;
+  border-bottom: 5px solid #252e45;
+  border-radius: 50%;
+}
+
+.hair {
+  position: absolute;
+  left: 5px;
+  top: -8px;
+  width: 135px;
+  height: 55px;
+  background: #4b3b38;
+  border-radius: 60% 55% 25% 30%;
+  transform: rotate(-5deg);
+}
+
+.body {
+  position: absolute;
+  left: 48px;
+  top: 135px;
+  width: 120px;
+  height: 120px;
+  background: #6d7cff;
+  border: 7px solid #252e45;
+  border-radius: 35px 35px 25px 25px;
+}
+
+.cape {
+  position: absolute;
+  z-index: 1;
+  right: 4px;
+  top: 145px;
+  width: 55px;
+  height: 100px;
+  background: #ff6d86;
+  clip-path: polygon(
+    0 0,
+    100% 15%,
+    65% 100%,
+    25% 70%
+  );
+}
+
+.magnifier {
+  position: absolute;
+  z-index: 4;
+  right: -15px;
+  bottom: 35px;
+  font-size: 50px;
+  transform: rotate(-15deg);
+}
+
+/* =========================
+   COINS & SHIELD
+========================= */
+
+.coin {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #ffd66b;
+  border: 5px solid #e9b93d;
+  font-weight: 900;
+  color: #8d6a16;
+}
+
+.coin-1 {
+  left: 45px;
+  bottom: 40px;
+}
+
+.coin-2 {
+  right: 70px;
+  bottom: 80px;
+}
+
+.shield {
+  position: absolute;
+  right: 38px;
+  bottom: 35px;
+  font-size: 58px;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font: 800 42px "Baloo 2";
+  margin: 5px 0;
+}
+
+.section-heading p,
+.mini-note {
+  color: #7b8496;
+  max-width: 430px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* =========================
+   QUICK ACCESS
+========================= */
+
+.quick {
+  padding-top: 25px;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.quick-card {
+  border: 1px solid #edf0f5;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 8px 24px #25304a08;
+}
+
+.quick-card b,
+.quick-card small {
+  display: block;
+}
+
+.quick-card small {
+  color: #8a92a1;
+  margin-top: 3px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+
+.pink {
+  background: #fff0f3;
+}
+
+.blue {
+  background: #eef0ff;
+}
+
+.yellow {
+  background: #fff8dd;
+}
+
+/* =========================
+   MODULE CARDS
+========================= */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.module-card {
+  padding: 23px;
+  border-radius: 24px;
+  min-height: 285px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pink-card {
+  background: #fff0f3;
+}
+
+.blue-card {
+  background: #eef0ff;
+}
+
+.yellow-card {
+  background: #fff8dc;
+}
+
+.green-card {
+  background: #e9f8ee;
+}
+
+.module-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module-icon {
+  font-size: 30px;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 900;
+  color: #81899b;
+  background: #ffffff99;
+  padding: 6px 9px;
+  border-radius: 99px;
+}
+
+.module-card h3 {
+  font: 800 23px / 1.05 "Baloo 2";
+  margin: 25px 0 10px;
+}
+
+.module-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #687286;
+}
+
+.text-btn {
+  margin-top: auto;
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+  font: 900 13px "Nunito";
+  color: #5966d9;
+  cursor: pointer;
+}
+
+/* =========================
+   SIMULATION
+========================= */
+
+.simulation-section {
+  padding-top: 50px;
+}
+
+.simulator {
+  background: #fff;
+  border: 1px solid #e9ecf4;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 18px 50px #25304a0b;
+  max-width: 850px;
+  margin: auto;
+}
+
+.sim-progress {
+  height: 8px;
+  background: #edf0f5;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.sim-progress span {
+  display: block;
+  height: 100%;
+  width: 33%;
+  background: #6d7cff;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.sim-label {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #9aa1af;
+  margin-bottom: 14px;
+}
+
+.message {
+  display: flex;
+  gap: 16px;
+  background: #f7f8fc;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  flex: none;
+}
+
+.message small {
+  display: block;
+  color: #9aa1af;
+  font-size: 11px;
+}
+
+.message p {
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.fake-link {
+  font-family: monospace;
+  background: #fff;
+  border: 1px dashed #ff9bae;
+  padding: 10px;
+  border-radius: 10px;
+  color: #e95d76;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.choices button {
+  padding: 14px;
+  border: 1px solid #e8ebf3;
+  background: #fff;
+  border-radius: 14px;
+  font: 800 13px "Nunito";
+  cursor: pointer;
+}
+
+.choices button:hover {
+  border-color: #6d7cff;
+  background: #f4f5ff;
+}
+
+.feedback {
+  margin-top: 18px;
+  padding: 17px;
+  border-radius: 16px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.feedback.good {
+  background: #e9f8ee;
+  color: #27734a;
+}
+
+.feedback.bad {
+  background: #fff0f3;
+  color: #b5445d;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =========================
+   MISSIONS
+========================= */
+
+.mission-list {
+  display: grid;
+  gap: 12px;
+}
+
+.mission {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 18px;
+  padding: 15px 18px;
+}
+
+.mission-icon {
+  font-size: 27px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #f5f6fb;
+  display: grid;
+  place-items: center;
+}
+
+.mission b,
+.mission small {
+  display: block;
+}
+
+.mission small {
+  color: #8b93a3;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.mission-status {
+  font-size: 12px;
+  font-weight: 900;
+  color: #6d7cff;
+}
+
+.mission button {
+  border: 0;
+  background: #eef0ff;
+  color: #5966d9;
+  border-radius: 11px;
+  padding: 9px 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* =========================
+   BADGE PANEL
+========================= */
+
+.badge-panel {
+  margin-top: 18px;
+  background: #222c46;
+  color: #fff;
+  border-radius: 24px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: auto 1fr 220px;
+  align-items: center;
+  gap: 18px;
+}
+
+.badge-big {
+  font-size: 50px;
+}
+
+.badge-panel .kicker {
+  color: #ffb0bd;
+}
+
+.badge-panel h3 {
+  font: 800 25px "Baloo 2";
+  margin: 2px 0;
+}
+
+.badge-panel p {
+  margin: 0;
+  color: #c5cbda;
+  font-size: 12px;
+}
+
+.badge-progress b {
+  display: block;
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.badge-progress div {
+  height: 8px;
+  background: #3d4760;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.badge-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #ffd66b;
+  transition: 0.4s;
+}
+
+/* =========================
+   SUPPORT
+========================= */
+
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.support-card {
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 24px;
+  padding: 26px;
+}
+
+.support-card > span {
+  font-size: 38px;
+}
+
+.support-card h3 {
+  font: 800 25px "Baloo 2";
+  margin: 12px 0 5px;
+}
+
+.support-card p {
+  color: #717b8e;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.outline-btn {
+  background: #fff;
+  border: 1px solid #dfe3ed;
+  border-radius: 11px;
+  padding: 10px 14px;
+  font-weight: 900;
+  color: #5966d9;
+  cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #202a43;
+  color: #fff;
+  padding: 35px 6vw;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font: 800 24px "Baloo 2";
+}
+
+.footer-brand span {
+  font-size: 24px;
+}
+
+.footer p {
+  color: #bdc4d3;
+  font-size: 12px;
+  margin-right: auto;
+}
+
+.footer-note {
+  font-size: 10px;
+  color: #8791a6;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #17203899;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.modal-box {
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 30px;
+  position: relative;
+  max-height: 85vh;
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  border: 0;
+  background: #f2f3f7;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-box h2 {
+  font: 800 32px "Baloo 2";
+  margin: 0 0 10px;
+}
+
+.modal-box p,
+.modal-box li {
+  color: #697386;
+  line-height: 1.7;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #202a43;
+  color: #fff;
+  padding: 13px 17px;
+  border-radius: 13px;
+  font-weight: 900;
+  transform: translateY(100px);
+  transition: 0.3s;
+  z-index: 60;
+}
+
+.toast.show {
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 850px) {
+  .nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    height: 380px;
+  }
+
+  .module-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading p {
+    margin-top: 8px;
+  }
+
+  .badge-panel {
+    grid-template-columns: auto 1fr;
+  }
+
+  .badge-progress {
+    grid-column: 1 / -1;
+  }
+
+  .choices {
+    grid-template-columns: 1fr;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 520px) {
+  .topbar {
+    padding: 0 18px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .section {
+    padding: 55px 18px;
+  }
+
+  .hero {
+    padding-top: 35px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-art {
+    height: 320px;
+  }
+
+  .character {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission {
+    grid-template-columns: auto 1fr;
+  }
+
+  .mission-status,
+  .mission button {
+    grid-column: 2;
+  }
+
+  .simulator {
+    padding: 18px;
+  }
+
+  .trust-row {
+    flex-direction: column;
+    gap: 7px;
+  }
+}
